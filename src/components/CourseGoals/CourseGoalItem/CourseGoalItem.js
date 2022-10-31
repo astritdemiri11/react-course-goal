@@ -1,6 +1,6 @@
-import './CourseGoalItem.css';
-
 import { PropTypes } from 'prop-types';
+
+import styles from './CourseGoalItem.module.css';
 
 const CourseGoalItem = ({ id, onDelete, children }) => {
   const deleteHandler = () => {
@@ -10,7 +10,7 @@ const CourseGoalItem = ({ id, onDelete, children }) => {
   };
 
   return (
-    <li className="goal-item" onClick={deleteHandler} aria-hidden="true">
+    <li className={styles['goal-item']} onClick={deleteHandler} aria-hidden="true">
       {children}
     </li>
   );

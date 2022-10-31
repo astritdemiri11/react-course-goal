@@ -1,6 +1,6 @@
-import './Button.css';
-
 import PropTypes from 'prop-types';
+
+import styles from './Button.module.css';
 
 const Button = ({ type, onClick, children }) => {
   const clickHandler = (event) => {
@@ -10,7 +10,7 @@ const Button = ({ type, onClick, children }) => {
   };
 
   return (
-    <button type={type === 'submit' ? 'submit' : 'button'} className="button" onClick={clickHandler}>
+    <button type={type === 'submit' ? 'submit' : 'button'} className={styles.button} onClick={clickHandler}>
       {children}
     </button>
   );
